@@ -9,7 +9,7 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 5%;
   background-color: #e8e8e8;
-  padding: 5%;
+  padding: 50px;
 
   width: 80%;
   margin: auto;
@@ -20,5 +20,10 @@
 .grid-item {
   aspect-ratio: 1;
   height: auto;
-  background-color: #dfdfdf;
+  background-color: #1f1f1f;
+  border-radius: 10px;
+}
+
+.page-title {
+  text-align: center;
 }

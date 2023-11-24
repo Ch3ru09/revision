@@ -13,7 +13,7 @@ function App() {
           <Routes>
             <Route path="/">
               <Route index element={<Home />} />
-              <Route path="variable" element={<Variables />} />
+              <Route path="variables" element={<Variables />} />
               <Route path="*" element={<NotFound />} />
             </Route>
           </Routes>
@@ -24,4 +24,3 @@ function App() {
 }
 
 export default App;
-

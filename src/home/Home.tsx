@@ -1,8 +1,9 @@
-import { redirect } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import styles from "./home.module.css";
 
 export default function Home() {
-  const pages = ["variables", "functions", "classes", "control-flow"];
+  const navigate = useNavigate();
+  const pages = ["Variables", "Functions", "Classes", "Control-flow"];
 
   return (
     <>
@@ -14,8 +15,10 @@ export default function Home() {
       <main className={styles["grid"]}>
         {pages.map((page) => {
           return (
-            <div onClick={() => redirect(page)} className={styles["grid-item"]}>
-              {page}
+            <div
+              onClick={() => navigate(page.toLowerCase())}
+              className={styles["grid-item"]}>
+              <h2 className={styles["page-title"]}>{page}</h2>
             </div>
           );
         })}
