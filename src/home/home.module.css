@@ -1,0 +1,9 @@
+.title {
+  font-family: "Concert One";
+  font-size: 8rem;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+}

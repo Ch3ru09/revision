@@ -2,6 +2,18 @@
   --primary-color: #1b1b1b;
 }
 
+html {
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(
+    135deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(210, 253, 45, 1) 100%
+  );
+}
+
 ul {
   list-style: none;
   padding: 0;

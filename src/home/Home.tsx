@@ -4,7 +4,9 @@ export default function Home() {
   return (
     <>
       <header>
-        <h1 className={styles[""]}>What don't you understand?</h1>
+        <h1 className={styles["title"]}>
+          What don't you <br /> understand?
+        </h1>
       </header>
       <main className={styles["grid"]}></main>
     </>
