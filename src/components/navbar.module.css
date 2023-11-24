@@ -19,6 +19,15 @@
   cursor: pointer;
 }
 
+.container::after {
+  content: "🢗";
+  position: absolute;
+  font-size: 2rem;
+  bottom: 0;
+  left: 50%;
+  translate: -50% 35%;
+}
+
 .dropdown {
   position: absolute;
   top: 100%;
