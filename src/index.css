@@ -1,0 +1,8 @@
+#root {
+  --primary-color: #1b1b1b;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
