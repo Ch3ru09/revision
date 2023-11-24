@@ -1,5 +1,4 @@
 .title {
-  font-family: "Concert One";
   font-size: 8rem;
   text-align: center;
 }
@@ -20,8 +19,16 @@
 .grid-item {
   aspect-ratio: 1;
   height: auto;
-  background-color: #1f1f1f;
+  border: solid 5px #15ffaa;
   border-radius: 10px;
+}
+
+.grid-item > img {
+  width: 50%;
+}
+
+.grid-item:hover {
+  cursor: pointer;
 }
 
 .page-title {

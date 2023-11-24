@@ -18,6 +18,7 @@ export default function Home() {
             <div
               onClick={() => navigate(page.toLowerCase())}
               className={styles["grid-item"]}>
+              <img src={"/pages/" + page.toLowerCase() + ".png"} />
               <h2 className={styles["page-title"]}>{page}</h2>
             </div>
           );
