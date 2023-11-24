@@ -1,6 +1,14 @@
 .title {
   font-size: 8rem;
   text-align: center;
+  background: linear-gradient(
+    135deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(210, 253, 45, 1) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .grid {

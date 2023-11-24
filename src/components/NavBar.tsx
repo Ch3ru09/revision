@@ -1,4 +1,3 @@
-import { BrowserRouter as Router, Link } from "react-router-dom";
 import styles from "./navBar.module.css";
 import { useState } from "react";
 
@@ -17,9 +16,9 @@ export default function Navbar() {
         </div>
         <div className={styles["dropdown"]}>
           <ul>
-            {languages.map((language: string) => {
+            {languages.map((language: string, i: number) => {
               return (
-                <li onClick={() => setLanguage(language)}>
+                <li onClick={() => setLanguage(language)} key={i}>
                   <img
                     className={styles["icon"]}
                     src={`/languages/${language.toLowerCase()}.png`}
@@ -30,11 +29,9 @@ export default function Navbar() {
           </ul>
         </div>
       </div>
-      <Router>
-        <Link to={"/"} className={styles["home"]}>
-          Home
-        </Link>
-      </Router>
+      <a href={"/"} className={styles["home"]}>
+        Home
+      </a>
     </nav>
   );
 }

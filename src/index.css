@@ -1,13 +1,10 @@
-#root {
+:root {
   --primary-color: #1b1b1b;
 }
 
 body {
-  background: linear-gradient(
-    135deg,
-    rgba(34, 193, 195, 1) 0%,
-    rgba(210, 253, 45, 1) 100%
-  );
+  background-color: var(--primary-color);
+  color: #eee;
   font-family: "Concert One";
 }
 

@@ -19,11 +19,12 @@ export default function Home() {
         </h1>
       </header>
       <main className={styles["grid"]}>
-        {pages.map((page) => {
+        {pages.map((page, i) => {
           return (
             <div
               onClick={() => navigate(page.toLowerCase())}
-              className={styles["grid-item"]}>
+              className={styles["grid-item"]}
+              key={i}>
               <img src={"/pages/" + page.toLowerCase() + ".png"} />
               <h2 className={styles["page-title"]}>{page}</h2>
             </div>

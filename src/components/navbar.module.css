@@ -62,7 +62,7 @@
 }
 
 .home {
-  color: black;
+  color: #eee;
   text-decoration: none;
   transition: color 250ms ease;
   justify-content: center;
