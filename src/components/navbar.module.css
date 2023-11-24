@@ -62,6 +62,7 @@
 }
 
 .home {
+  font-family: "Concert One";
   color: black;
   text-decoration: none;
   transition: color 250ms ease;

@@ -6,4 +6,19 @@
 
 .grid {
   display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5%;
+  background-color: #e8e8e8;
+  padding: 5%;
+
+  width: 80%;
+  margin: auto;
+
+  border-radius: 10px;
+}
+
+.grid-item {
+  aspect-ratio: 1;
+  height: auto;
+  background-color: #dfdfdf;
 }

@@ -2,10 +2,6 @@
   --primary-color: #1b1b1b;
 }
 
-html {
-  height: 100%;
-}
-
 body {
   background: linear-gradient(
     135deg,
