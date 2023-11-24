@@ -6,21 +6,42 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 5%;
-  background-color: #e8e8e8;
+  gap: 50px;
   padding: 50px;
 
   width: 80%;
   margin: auto;
 
-  border-radius: 10px;
+  border-radius: 40px;
+}
+
+@property --pos1 {
+  syntax: "<percentage>";
+  initial-value: 0%;
+  inherits: false;
+}
+
+@property --pos2 {
+  syntax: "<percentage>";
+  initial-value: 0%;
+  inherits: false;
 }
 
 .grid-item {
   aspect-ratio: 1;
   height: auto;
   border: solid 5px #15ffaa;
-  border-radius: 10px;
+  border-radius: 40px;
+  display: grid;
+  place-items: center;
+
+  background-image: radial-gradient(
+    circle,
+    #15ffaa var(--pos1),
+    #e8e8e888 var(--pos2)
+  );
+
+  transition: --pos1 250ms ease-out, --pos2 250ms ease-out;
 }
 
 .grid-item > img {
@@ -29,6 +50,12 @@
 
 .grid-item:hover {
   cursor: pointer;
+  --pos1: 100%;
+  --pos2: 100%;
+}
+
+.grid-item:hover > h2 {
+  filter: invert(100%);
 }
 
 .page-title {

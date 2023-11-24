@@ -3,7 +3,13 @@ import styles from "./home.module.css";
 
 export default function Home() {
   const navigate = useNavigate();
-  const pages = ["Variables", "Functions", "Classes", "Control-flow"];
+  const pages = [
+    "Fundamentals",
+    "Variables",
+    "Functions",
+    "Classes",
+    "Control-flow",
+  ];
 
   return (
     <>
