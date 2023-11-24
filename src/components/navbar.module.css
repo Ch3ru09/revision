@@ -20,12 +20,13 @@
 }
 
 .container::after {
-  content: "🢗";
+  content: "^";
   position: absolute;
   font-size: 2rem;
   bottom: 0;
   left: 50%;
   translate: -50% 35%;
+  scale: 1.5 -1;
 }
 
 .dropdown {
@@ -74,3 +75,4 @@
   color: #888;
   transition: color 250ms ease;
 }
+

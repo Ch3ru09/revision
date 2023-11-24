@@ -1,4 +1,4 @@
-lockfileVersion: '6.1'
+lockfileVersion: '6.0'
 
 settings:
   autoInstallPeers: true
@@ -16,6 +16,9 @@ dependencies:
     version: 18.2.0(react@18.2.0)
 
 devDependencies:
+  '@types/prismjs':
+    specifier: ^1.26.3
+    version: 1.26.3
   '@types/react':
     specifier: ^18.2.37
     version: 18.2.37
@@ -719,6 +722,10 @@ packages:
 
   /@types/json-schema@7.0.15:
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
+    dev: true
+
+  /@types/prismjs@1.26.3:
+    resolution: {integrity: sha512-A0D0aTXvjlqJ5ZILMz3rNfDBOx9hHxLZYv2by47Sm/pqW35zzjusrZTryatjN/Rf8Us2gZrJD+KeHbUSTux1Cw==}
     dev: true
 
   /@types/prop-types@15.7.11:
