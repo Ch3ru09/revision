@@ -5,6 +5,12 @@
 body {
   background-color: var(--primary-color);
   color: #eee;
+  font-family: "Poppins";
+}
+
+h1,
+h2,
+h3 {
   font-family: "Concert One";
 }
 
@@ -12,3 +18,9 @@ ul {
   list-style: none;
   padding: 0;
 }
+
+main {
+  width: 90%;
+  margin: auto;
+}
+

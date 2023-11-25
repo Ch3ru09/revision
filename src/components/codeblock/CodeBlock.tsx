@@ -1,20 +1,22 @@
-import { ReactNode, useEffect } from "react";
-import Prism from "prismjs";
+import { PrismAsyncLight as SyntaxHighlighter } from "react-syntax-highlighter";
+import { tomorrow } from "react-syntax-highlighter/dist/esm/styles/prism";
+import styles from "./codeblock.module.css";
 
 export default function CodeBlock({ language, children }: CodeBlockProps) {
-  useEffect(() => {
-    Prism.highlightAll(true);
-  }, []);
   return (
-    <div className="Code">
-      <pre>
-        <code className={`language-${language}`}>{children}</code>
-      </pre>
-    </div>
+    <SyntaxHighlighter
+      language={language}
+      style={tomorrow}
+      showLineNumbers={true}
+      className={styles["container"]}
+    >
+      {children}
+    </SyntaxHighlighter>
   );
 }
 
 type CodeBlockProps = {
   language: string;
-  children: ReactNode;
+  children: string | string[];
 };
+
