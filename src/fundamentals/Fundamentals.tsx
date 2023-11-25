@@ -61,10 +61,7 @@ export default function Fundamentals() {
         </p>
         <p>
           My prefered way of running code is to use the termial (see{" "}
-          <BrowserRouter>
-            <Link to="/terminal">course</Link>
-          </BrowserRouter>{" "}
-          on terminal commands)
+          <Link to="/terminal">course</Link> on terminal commands)
         </p>
       </section>
     </main>
