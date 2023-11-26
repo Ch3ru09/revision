@@ -1,6 +1,6 @@
 .navbar {
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
   padding: 0 20px;
   gap: 5px;
   font-family: "Concert One";
@@ -32,14 +32,15 @@
 
 .dropdown {
   position: absolute;
-  top: 100%;
-  left: 50%;
+  top: 110%;
+  right: 0;
   padding: 0px 20px;
-  transform: translateX(-50%);
   scale: 0;
-  transform-origin: 0% 0%;
-  transition: scale 250ms ease;
-  background-color: #eee;
+  transform-origin: 80% 0%;
+  transition: scale 250ms ease 250ms;
+  background-color: transparent;
+  background-color: #eee8;
+  border: solid 5px #15ffaa;
   border-radius: 10px;
 }
 
@@ -51,16 +52,24 @@
 
 .container:hover > .dropdown {
   scale: 1;
-  transform-origin: 0% 0%;
+  transform-origin: 80% 0%;
   transition: scale 250ms ease;
+}
+
+.no-dot-ul {
+  list-style: none;
+  padding: 0;
 }
 
 .icon {
   aspect-ratio: 1;
   width: 50px;
   height: auto;
-  background-color: #ddd;
   border-radius: 10px;
+}
+
+.icon:hover {
+  filter: drop-shadow(0px 0px 10px #15ffaa);
 }
 
 .home {
@@ -76,4 +85,3 @@
   color: #888;
   transition: color 250ms ease;
 }
-

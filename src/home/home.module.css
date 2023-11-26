@@ -43,23 +43,12 @@
   display: grid;
   place-items: center;
 
-  background-image: radial-gradient(
-    circle,
-    #15ffaa var(--pos1),
-    #e8e8e888 var(--pos2)
-  );
-
-  transition: --pos1 250ms ease-out, --pos2 250ms ease-out;
+  --c1: #15ffaa;
+  --c2: #e8e8e888;
 }
 
 .grid-item > img {
   width: 50%;
-}
-
-.grid-item:hover {
-  cursor: pointer;
-  --pos1: 100%;
-  --pos2: 100%;
 }
 
 .grid-item:hover > h2 {

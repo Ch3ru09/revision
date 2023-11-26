@@ -5,7 +5,7 @@ import styles from "./fundamentals.module.css";
 export default function Fundamentals() {
   return (
     <>
-      <h1 className={styles["title"]}>Java Fundamentals</h1>
+      <h1>Java Fundamentals</h1>
       <section>
         <h2 id="How-to-run">Setup</h2>
         <p>
@@ -39,7 +39,7 @@ export default function Fundamentals() {
 
         <p>
           <code>HelloWorld.java</code>
-          <CodeBlock language="java">{boilerplate()}</CodeBlock>
+          <CodeBlock language="java">{getBoilerplate()}</CodeBlock>
         </p>
         <p>
           In this case, we see the basic chunk of code needed for a java program
@@ -49,7 +49,7 @@ export default function Fundamentals() {
         </p>
         <p>
           <code>HelloWorld.py</code>
-          <CodeBlock language="python">{pythonExample()}</CodeBlock>
+          <CodeBlock language="python">{getPythonExample()}</CodeBlock>
         </p>
         <p>However, it has to be written so the code runs.</p>
         <hr />
@@ -80,15 +80,18 @@ export default function Fundamentals() {
           first time into the new world that is programming.
         </p>
         <p>Now, we can get into the basics of programming in general.</p>
-        <p>
-          <Link to="/variables">next class: Variables</Link>
-        </p>
+
+        <Link
+          to="/variables"
+          className={styles["nextButton"] + " hover-effect"}>
+          <small>next class:</small> Variables
+        </Link>
       </section>
     </>
   );
 }
 
-function boilerplate() {
+function getBoilerplate() {
   return `public class HelloWorld {
     public static void main() {
       System.out.println("Hello, World!");
@@ -96,6 +99,6 @@ function boilerplate() {
   }`;
 }
 
-function pythonExample() {
+function getPythonExample() {
   return `print("Hello World!")`;
 }

@@ -25,7 +25,7 @@ export default function Home() {
           return (
             <div
               onClick={() => navigate(page.toLowerCase())}
-              className={styles["grid-item"]}
+              className={styles["grid-item"] + " hover-effect"}
               key={i}>
               <img src={"/pagesIcons/" + page.toLowerCase() + ".png"} />
               <h2 className={styles["page-title"]}>{page}</h2>
@@ -38,7 +38,7 @@ export default function Home() {
           return (
             <div
               onClick={() => navigate(page.toLowerCase())}
-              className={styles["grid-item"]}
+              className={styles["grid-item"] + " hover-effect"}
               key={i}>
               <img src={"/pagesIcons/" + page.toLowerCase() + ".png"} />
               <h2 className={styles["page-title"]}>{page}</h2>

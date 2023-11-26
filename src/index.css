@@ -31,12 +31,40 @@ h2:hover::after {
   filter: invert(60%);
 }
 
-ul {
-  list-style: none;
-  padding: 0;
-}
-
 main {
   width: 90%;
   margin: auto;
+  margin-bottom: 25px;
+}
+
+main h1 {
+  text-align: center;
+}
+
+@property --pos1 {
+  syntax: "<percentage>";
+  initial-value: 0%;
+  inherits: false;
+}
+
+@property --pos2 {
+  syntax: "<percentage>";
+  initial-value: 0%;
+  inherits: false;
+}
+
+.hover-effect {
+  background-image: radial-gradient(
+    circle,
+    var(--c1) var(--pos1),
+    var(--c2) var(--pos2)
+  );
+
+  transition: --pos1 250ms ease-out, --pos2 250ms ease-out;
+}
+
+.hover-effect:hover {
+  cursor: pointer;
+  --pos1: 100%;
+  --pos2: 100%;
 }

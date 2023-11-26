@@ -7,6 +7,9 @@ export default function Navbar() {
 
   return (
     <nav className={styles["navbar"]}>
+      <a href={"/"} className={styles["home"]}>
+        Home
+      </a>
       <div className={styles["container"]}>
         <div className={styles["languages"]}>
           <img
@@ -15,7 +18,7 @@ export default function Navbar() {
           />
         </div>
         <div className={styles["dropdown"]}>
-          <ul>
+          <ul className={styles["no-dot-ul"]}>
             {languages.map((language: string, i: number) => {
               return (
                 <li onClick={() => setLanguage(language)} key={i}>
@@ -29,9 +32,6 @@ export default function Navbar() {
           </ul>
         </div>
       </div>
-      <a href={"/"} className={styles["home"]}>
-        Home
-      </a>
     </nav>
   );
 }
