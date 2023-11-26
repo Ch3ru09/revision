@@ -63,7 +63,7 @@ export default function Fundamentals() {
         </p>
         <p>
           My prefered way of running code is to use the termial (see{" "}
-          <Link to="/terminal">course</Link> on terminal commands)
+          <Link to="/terminal">course</Link> on terminal commands).
         </p>
         <p>
           However, you can just use the IDE's built-in run button like for
@@ -77,9 +77,17 @@ export default function Fundamentals() {
           <CodeBlock language="txt">Hello, World!</CodeBlock>
           "Hello World" is the hello that programming students give as they
           print their first line in the console since they are entering for the
-          first time into the new world that is programming.
+          first time into the new world that is programming. <br />
+          In java, the simplest way to print something to the console is to use
+          the method.
+          <CodeBlock language="java">
+            System.out.println(/* what is printed goes here */);
+          </CodeBlock>
         </p>
-        <p>Now, we can get into the basics of programming in general.</p>
+        <p>
+          Now, we can get into the basics of programming in general. Starting
+          with variables.
+        </p>
 
         <Link
           to="/variables"
@@ -93,7 +101,7 @@ export default function Fundamentals() {
 
 function getBoilerplate() {
   return `public class HelloWorld {
-    public static void main() {
+    public static void main(String[] args) {
       System.out.println("Hello, World!");
     }
   }`;

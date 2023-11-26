@@ -13,15 +13,39 @@ export default function Variables() {
           <CodeBlock language={"java"}>{getVariablesUses()}</CodeBlock>
         </p>
       </section>
-      {/* <p>
-        I still want to point out the fact that
-        code flow from top to bottom. This means that, for example, variables
-        that haven't been declared above, won't be able to
-      </p> */}
+      <p>
+        It's usefull to point out the fact that code flow from top to bottom.
+        Meaning that, for example, variables that haven't been declared above,
+        won't be able to be used below.
+      </p>
     </>
   );
 }
 
 function getVariablesUses() {
-  return ``;
+  return `import java.util.Scanner;
+  
+  public class Main {
+    public static void main(String[] args) {
+
+      // as a counter
+      int index = 0;
+      index++; // > 1
+      index++; // > 2
+      
+      // as a reference
+      double final PI = 3.14159265;
+
+      // as an object that can be used
+      Scanner input = new Scanner(System.in);
+
+      // as a value value of an user input
+      String lastName = input.nextLine();
+
+      System.out.println(counter); // 2
+      System.out.println(PI); // 3.14159265;
+      System.out.println(lastName); // Liang
+    }
+  }
+  `;
 }
