@@ -20,9 +20,15 @@ h2 {
 }
 
 h2:hover::after {
-  content: "🔗";
+  content: "";
+  background-image: url("/link.png");
+  height: 100%;
+  width: auto;
+  aspect-ratio: 1;
+  background-size: cover;
   position: absolute;
   margin-left: 10px;
+  filter: invert(60%);
 }
 
 ul {
