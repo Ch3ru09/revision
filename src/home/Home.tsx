@@ -3,13 +3,15 @@ import styles from "./home.module.css";
 
 export default function Home() {
   const navigate = useNavigate();
-  const pages = [
+  const LanguageSpecificPages = [
     "Fundamentals",
     "Variables",
     "Functions",
     "Classes",
     "Control-flow",
   ];
+
+  const AllLanguagePages = ["Terminal"];
 
   return (
     <>
@@ -18,19 +20,32 @@ export default function Home() {
           What don't you <br /> understand?
         </h1>
       </header>
-      <main className={styles["grid"]}>
-        {pages.map((page, i) => {
+      <section className={styles["grid"]}>
+        {LanguageSpecificPages.map((page, i) => {
           return (
             <div
               onClick={() => navigate(page.toLowerCase())}
               className={styles["grid-item"]}
               key={i}>
-              <img src={"/pages/" + page.toLowerCase() + ".png"} />
+              <img src={"/pagesIcons/" + page.toLowerCase() + ".png"} />
               <h2 className={styles["page-title"]}>{page}</h2>
             </div>
           );
         })}
-      </main>
+      </section>
+      <section className={styles["grid"]}>
+        {AllLanguagePages.map((page, i) => {
+          return (
+            <div
+              onClick={() => navigate(page.toLowerCase())}
+              className={styles["grid-item"]}
+              key={i}>
+              <img src={"/pagesIcons/" + page.toLowerCase() + ".png"} />
+              <h2 className={styles["page-title"]}>{page}</h2>
+            </div>
+          );
+        })}
+      </section>
     </>
   );
 }
