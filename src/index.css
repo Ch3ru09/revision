@@ -19,7 +19,7 @@ h2 {
   position: relative;
 }
 
-h2:hover::after {
+h2:not(.home-h2):hover::after {
   content: "";
   background-image: url("/link.png");
   height: 100%;

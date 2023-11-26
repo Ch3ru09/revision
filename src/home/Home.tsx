@@ -28,7 +28,7 @@ export default function Home() {
               className={styles["grid-item"] + " hover-effect"}
               key={i}>
               <img src={"/pagesIcons/" + page.toLowerCase() + ".png"} />
-              <h2 className={styles["page-title"]}>{page}</h2>
+              <h2 className={styles["page-title"] + " home-h2"}>{page}</h2>
             </div>
           );
         })}
@@ -41,7 +41,7 @@ export default function Home() {
               className={styles["grid-item"] + " hover-effect"}
               key={i}>
               <img src={"/pagesIcons/" + page.toLowerCase() + ".png"} />
-              <h2 className={styles["page-title"]}>{page}</h2>
+              <h2 className={styles["page-title"] + " home-h2"}>{page}</h2>
             </div>
           );
         })}
