@@ -3,12 +3,12 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://Ch3ru09.github.io/revision/",
+  "homepage": "https://ch3ru09.github.io/revision/",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "predeploy": "pnpm run build",
-    "deploy": "gh-pages -d dist",
+    "deploy": "pnpm run predeploy && gh-pages -d dist",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
