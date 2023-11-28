@@ -4,12 +4,12 @@ import Home from "./home/Home";
 import Fundamentals from "./fundamentals/Fundamentals";
 import Variables from "./variables/Variables";
 import NotFound from "./notfound/NotFound";
-import Layout from "./components/Layout";
+import Layout from "./components/layout/Layout";
 
 function App() {
   return (
     <>
-      <BrowserRouter basename="/">
+      <BrowserRouter basename={import.meta.env.BASE_URL}>
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
@@ -24,3 +24,4 @@ function App() {
 }
 
 export default App;
+

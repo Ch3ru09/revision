@@ -36,8 +36,8 @@
   right: 0;
   padding: 0px 20px;
   scale: 0;
-  transform-origin: 80% 0%;
-  transition: scale 250ms ease 250ms;
+  transform-origin: 85% 0%;
+  transition: scale 250ms ease 100ms;
   background-color: transparent;
   background-color: #eee8;
   border: solid 5px #15ffaa;
@@ -52,7 +52,7 @@
 
 .container:hover > .dropdown {
   scale: 1;
-  transform-origin: 80% 0%;
+  transform-origin: 85% 0%;
   transition: scale 250ms ease;
 }
 
@@ -85,3 +85,4 @@
   color: #888;
   transition: color 250ms ease;
 }
+
