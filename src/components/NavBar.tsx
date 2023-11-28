@@ -1,4 +1,4 @@
-import styles from "./navBar.module.css";
+import styles from "./navbar.module.css";
 import { useState } from "react";
 
 export default function Navbar() {
@@ -35,3 +35,4 @@ export default function Navbar() {
     </nav>
   );
 }
+
