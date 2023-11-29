@@ -13,11 +13,10 @@ export default function Fundamentals() {
         <p>
           First, make sure that you have downloaded the Java Development Kit
           (JDK). <br />
-          If you don't have it yet, downloaded it{" "}
+          If you don't have it yet, download it{" "}
           <a
             href="https://www.oracle.com/java/technologies/downloads/"
-            target="_blank"
-          >
+            target="_blank">
             here
           </a>
         </p>
@@ -96,8 +95,7 @@ export default function Fundamentals() {
 
         <Link
           to="/variables"
-          className={styles["nextButton"] + " hover-effect"}
-        >
+          className={styles["nextButton"] + " hover-effect"}>
           <small>next class:</small> Variables
         </Link>
       </section>
@@ -116,4 +114,3 @@ function getBoilerplate() {
 function getPythonExample() {
   return `print("Hello World!")`;
 }
-

@@ -31,12 +31,14 @@ export default function Variables() {
         <p>
           In java, as you might have noticed above, when declaring a variable,
           you have to declare it with the Data type that the variable will
-          contain.
+          contain. <br />
+          Here's some examples of data types that used.
         </p>
         <p>
           <code>BuiltInDataTypes.java</code>
           <CodeBlock language="java">{getDataTypeExamples()}</CodeBlock>
         </p>
+        <p>notice that</p>
       </section>
     </>
   );
@@ -87,11 +89,10 @@ function getDataTypeExamples() {
     int age = 20;
     float hourlySalary = 25.00f;
     double LatitudePosition = 56.1304;
-    char grade = 'S';
+    char grade = 'A';
 
     String name = "foo";
   }
 }
 `;
 }
-

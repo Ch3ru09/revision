@@ -1,7 +1,7 @@
 import styles from "./navbar.module.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { icons } from "./icons";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Navbar() {
   const [language, setLanguage] = useState("java");
@@ -9,6 +9,7 @@ export default function Navbar() {
 
   return (
     <nav className={styles["navbar"]}>
+      <ScrollToTop />
       <Link to="/" className={styles["home"]}>
         Home
       </Link>
@@ -38,3 +39,12 @@ export default function Navbar() {
   );
 }
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [pathname]);
+
+  return null;
+}
