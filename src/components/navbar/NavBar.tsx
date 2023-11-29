@@ -1,6 +1,7 @@
 import styles from "./navbar.module.css";
 import { useState } from "react";
 import { icons } from "./icons";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [language, setLanguage] = useState("java");
@@ -8,9 +9,9 @@ export default function Navbar() {
 
   return (
     <nav className={styles["navbar"]}>
-      <a href={"/"} className={styles["home"]}>
+      <Link to={import.meta.env.BASE_URL ?? "/"} className={styles["home"]}>
         Home
-      </a>
+      </Link>
       <div className={styles["container"]}>
         <div className={styles["languages"]}>
           <img
