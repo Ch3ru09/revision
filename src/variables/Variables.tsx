@@ -29,10 +29,12 @@ export default function Variables() {
       <section>
         <h2>Data types</h2>
         <p>
-          In java, when declaring a variable, you have to declare it with the
-          Data type that the variable will contain.
+          In java, as you might have noticed above, when declaring a variable,
+          you have to declare it with the Data type that the variable will
+          contain.
         </p>
         <p>
+          <code>BuiltInDataTypes.java</code>
           <CodeBlock language="java">{getDataTypeExamples()}</CodeBlock>
         </p>
       </section>
@@ -80,10 +82,16 @@ function getFlowExamples() {
 }
 
 function getDataTypeExamples() {
-  return `
-string name = "foo";
-int age = 20;
-float hourlySalary = 25.00f;
+  return `public class BuiltInDataTypes {
+  public static void main(String[] args) {
+    int age = 20;
+    float hourlySalary = 25.00f;
+    double LatitudePosition = 56.1304;
+    char grade = 'S';
+
+    String name = "foo";
+  }
+}
 `;
 }
 
