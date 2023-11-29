@@ -9,7 +9,7 @@ export default function Navbar() {
 
   return (
     <nav className={styles["navbar"]}>
-      <Link to={import.meta.env.BASE_URL ?? "/"} className={styles["home"]}>
+      <Link to="/" className={styles["home"]}>
         Home
       </Link>
       <div className={styles["container"]}>

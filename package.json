@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://ch3ru09.github.io/revision/",
+  "homepage": "https://ch3ru09.github.io/revision/#/",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
