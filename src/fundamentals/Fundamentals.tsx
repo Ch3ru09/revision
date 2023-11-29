@@ -86,6 +86,8 @@ export default function Fundamentals() {
           <CodeBlock language="java">
             System.out.println(/* what is printed goes here */);
           </CodeBlock>
+          Also, notice the semicolon (";") at the end of the line which is
+          mendatory in java.
         </p>
         <p>
           Now, we can get into the basics of programming in general. Starting

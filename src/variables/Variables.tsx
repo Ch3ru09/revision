@@ -28,6 +28,13 @@ export default function Variables() {
       </section>
       <section>
         <h2>Data types</h2>
+        <p>
+          In java, when declaring a variable, you have to declare it with the
+          Data type that the variable will contain.
+        </p>
+        <p>
+          <CodeBlock language="java">{getDataTypeExamples()}</CodeBlock>
+        </p>
       </section>
     </>
   );
@@ -71,3 +78,12 @@ function getFlowExamples() {
   }
 }`;
 }
+
+function getDataTypeExamples() {
+  return `
+string name = "foo";
+int age = 20;
+float hourlySalary = 25.00f;
+`;
+}
+
