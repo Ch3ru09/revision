@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import CodeBlock from "../components/codeblock/CodeBlock";
 import styles from "./fundamentals.module.css";
 
+import runFileImage from "./assets/runfile.png";
+
 export default function Fundamentals() {
   return (
     <>
@@ -14,7 +16,8 @@ export default function Fundamentals() {
           If you don't have it yet, downloaded it{" "}
           <a
             href="https://www.oracle.com/java/technologies/downloads/"
-            target="_blank">
+            target="_blank"
+          >
             here
           </a>
         </p>
@@ -70,7 +73,7 @@ export default function Fundamentals() {
           Intellij in this case.
         </p>
         <p>
-          <img src="/fundamentals/runfile.png" className={styles["runfile"]} />
+          <img src={runFileImage} className={styles["runfile"]} />
         </p>
         <p>
           When this code is ran, the output in the console should be{" "}
@@ -91,7 +94,8 @@ export default function Fundamentals() {
 
         <Link
           to="/variables"
-          className={styles["nextButton"] + " hover-effect"}>
+          className={styles["nextButton"] + " hover-effect"}
+        >
           <small>next class:</small> Variables
         </Link>
       </section>
@@ -110,3 +114,4 @@ function getBoilerplate() {
 function getPythonExample() {
   return `print("Hello World!")`;
 }
+

@@ -1,5 +1,6 @@
 import styles from "./navbar.module.css";
 import { useState } from "react";
+import { icons } from "./icons";
 
 export default function Navbar() {
   const [language, setLanguage] = useState("java");
@@ -14,7 +15,7 @@ export default function Navbar() {
         <div className={styles["languages"]}>
           <img
             className={styles["container-icon"]}
-            src={`/languages/${language.toLowerCase()}.png`}
+            src={icons[language.toLowerCase()]}
           />
         </div>
         <div className={styles["dropdown"]}>
@@ -24,7 +25,7 @@ export default function Navbar() {
                 <li onClick={() => setLanguage(language)} key={i}>
                   <img
                     className={styles["icon"]}
-                    src={`/languages/${language.toLowerCase()}.png`}
+                    src={icons[language.toLowerCase()]}
                   />
                 </li>
               );

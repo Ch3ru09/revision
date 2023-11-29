@@ -1,5 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import styles from "./home.module.css";
+import { Suspense } from "react";
+import Loading from "../components/loading/Loading";
+import { icons } from "./icons";
 
 export default function Home() {
   const navigate = useNavigate();
@@ -20,32 +23,27 @@ export default function Home() {
           What don't you <br /> understand?
         </h1>
       </header>
-      <section className={styles["grid"]}>
-        {LanguageSpecificPages.map((page, i) => {
-          return (
-            <div
-              onClick={() => navigate(page.toLowerCase())}
-              className={styles["grid-item"] + " hover-effect"}
-              key={i}>
-              <img src={"/pagesIcons/" + page.toLowerCase() + ".png"} />
-              <h2 className={styles["page-title"] + " home-h2"}>{page}</h2>
-            </div>
-          );
-        })}
-      </section>
-      <section className={styles["grid"]}>
-        {AllLanguagePages.map((page, i) => {
-          return (
-            <div
-              onClick={() => navigate(page.toLowerCase())}
-              className={styles["grid-item"] + " hover-effect"}
-              key={i}>
-              <img src={"/pagesIcons/" + page.toLowerCase() + ".png"} />
-              <h2 className={styles["page-title"] + " home-h2"}>{page}</h2>
-            </div>
-          );
-        })}
-      </section>
+      {[LanguageSpecificPages, AllLanguagePages].map((e, i) => {
+        return (
+          <section className={styles["grid"]} key={i}>
+            {e.map((page, i) => {
+              return (
+                <div
+                  onClick={() => navigate(page.toLowerCase())}
+                  className={styles["grid-item"] + " hover-effect"}
+                  key={i}
+                >
+                  <Suspense fallback={<Loading />}>
+                    <img src={icons[page.toLowerCase()]} />
+                  </Suspense>
+                  <h2 className={styles["page-title"] + " home-h2"}>{page}</h2>
+                </div>
+              );
+            })}
+          </section>
+        );
+      })}
     </>
   );
 }
+
