@@ -3,6 +3,7 @@ import styles from "./home.module.css";
 import { Suspense } from "react";
 import Loading from "../components/loading/Loading";
 import { icons } from "./icons";
+import CodeBlock from "../components/codeblock/CodeBlock";
 
 export default function Home() {
   const navigate = useNavigate();
@@ -18,6 +19,9 @@ export default function Home() {
 
   return (
     <>
+      <div style={{ display: "none" }}>
+        <CodeBlock language="java">preloader</CodeBlock>
+      </div>
       <header>
         <h1 className={styles["title"]}>
           What don't you <br /> understand?
