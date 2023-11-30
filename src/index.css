@@ -48,11 +48,11 @@ main h1 {
   text-align: center;
 }
 
-code {
+:not(pre) > code {
   background-color: color-mix(in srgb, var(--primary-color) 70%, black);
   border-radius: 3px;
   font-family: "Source Code Pro", courier, monospace;
-  padding: 0 3px;
+  padding: 1px 5px;
 }
 
 @property --pos1 {

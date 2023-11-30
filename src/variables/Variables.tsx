@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
+
 import CodeBlock from "../components/codeblock/CodeBlock";
+import PageNav from "../components/button/pageNav";
 
 export default function Variables() {
   return (
@@ -56,6 +58,9 @@ export default function Variables() {
           declared in.
         </p>
       </section>
+      <nav>
+        <PageNav isNext={false}>Fundamentals</PageNav>
+      </nav>
     </>
   );
 }

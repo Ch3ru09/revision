@@ -3,6 +3,7 @@ import CodeBlock from "../components/codeblock/CodeBlock";
 import styles from "./fundamentals.module.css";
 
 import runFileImage from "./assets/runfile.png";
+import PageNav from "../components/button/pageNav";
 
 export default function Fundamentals() {
   return (
@@ -27,9 +28,7 @@ export default function Fundamentals() {
         <hr />
       </section>
       <section>
-        <h2 id="How-the-code-should-be-setup">
-          How the code should be written
-        </h2>
+        <h2 id="How-the-code-should-be-setup">How the code works</h2>
         <p>
           Java is a language known to have a lot of boilerplate meaning that
           there is a lot of code that means nothing to the programmer*.
@@ -92,13 +91,10 @@ export default function Fundamentals() {
           Now, we can get into the basics of programming in general. Starting
           with variables.
         </p>
-
-        <Link
-          to="/variables"
-          className={styles["nextButton"] + " hover-effect"}>
-          <small>next class:</small> Variables
-        </Link>
       </section>
+      <nav>
+        <PageNav isNext={true}>Variables</PageNav>
+      </nav>
     </>
   );
 }

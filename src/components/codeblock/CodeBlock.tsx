@@ -8,8 +8,7 @@ export default function CodeBlock({ language, children }: CodeBlockProps) {
       language={language}
       style={tomorrow}
       showLineNumbers={true}
-      className={styles["container"]}
-    >
+      className={styles["container"]}>
       {children}
     </SyntaxHighlighter>
   );
@@ -19,4 +18,3 @@ type CodeBlockProps = {
   language: string;
   children: string | string[];
 };
-
