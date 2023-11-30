@@ -22,11 +22,11 @@ h3 {
 }
 
 h2 {
-  cursor: pointer;
   position: relative;
 }
 
 h2:not(.home-h2):hover::after {
+  cursor: pointer;
   content: "";
   background-image: url("/link.png");
   height: 100%;
@@ -74,4 +74,8 @@ main h1 {
   cursor: pointer;
   --pos1: 100%;
   --pos2: 100%;
+}
+
+.not-selectable {
+  user-select: none;
 }
