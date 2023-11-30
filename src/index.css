@@ -25,8 +25,11 @@ h2 {
   position: relative;
 }
 
-h2:not(.home-h2):hover::after {
+h2:not(.home-h2) {
   cursor: pointer;
+}
+
+h2:not(.home-h2):hover::after {
   content: "";
   background-image: url("/link.png");
   height: 100%;
@@ -83,7 +86,9 @@ var {
   transition: --pos1 250ms ease-out, --pos2 250ms ease-out;
 }
 
-.hover-effect:hover {
+.hover-effect:hover,
+.hover-effect:focus {
+  outline: none;
   cursor: pointer;
   --pos1: 100%;
   --pos2: 100%;

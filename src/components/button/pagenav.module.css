@@ -11,7 +11,8 @@
   --c2: transparent;
 }
 
-.nextButton:hover {
+.nextButton:hover,
+.nextButton:focus {
   color: var(--primary-color);
 }
 
@@ -19,6 +20,8 @@
   color: grey;
 }
 
-.nextButton:hover > small {
+.nextButton:hover > small,
+.nextButton:focus > small {
   color: #555;
 }
+
