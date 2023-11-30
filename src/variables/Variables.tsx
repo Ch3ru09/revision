@@ -140,10 +140,10 @@ function getDataTypeExamples() {
 
 function getVariableScopeExample() {
   return `public class BuiltInDataTypes {
-  public static void main(String[] args) {
+  public static void main(String[] args) { // outer scope
     int x = 1;
 
-    if (true) {
+    if (true) { // inner scope
       int y = 2;
       System.out.println(x); // works, prints 1
       System.out.println(y); // works, prints 2

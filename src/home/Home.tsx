@@ -7,6 +7,7 @@ import { icons } from "./icons";
 import useScrollPosition from "../components/hooks/useScrollPosition";
 
 import styles from "./home.module.css";
+import CodeBlock from "../components/codeblock/CodeBlock";
 
 export default function Home() {
   const navigate = useNavigate();
@@ -26,16 +27,17 @@ export default function Home() {
 
   return (
     <>
-      {/* <div style={{ display: "none" }}>
+      <div style={{ display: "none" }}>
         <CodeBlock language="java">preloader</CodeBlock>
-      </div> */}
+      </div>
 
       <header
         className={styles["title-container"]}
         style={{
           translate: `0 ${titlePos}px`,
           opacity: 1 - titlePos * 0.004,
-        }}>
+        }}
+      >
         <h1 className={styles["title"] + " not-selectable"}>
           What don't you <br /> understand?
         </h1>
@@ -51,7 +53,8 @@ export default function Home() {
                   <div
                     onClick={() => navigate(page.toLowerCase())}
                     className={styles["grid-item"] + " hover-effect"}
-                    key={i}>
+                    key={i}
+                  >
                     <Suspense fallback={<Loading />}>
                       <img src={icons[page.toLowerCase()]} />
                     </Suspense>
@@ -66,3 +69,4 @@ export default function Home() {
     </>
   );
 }
+
