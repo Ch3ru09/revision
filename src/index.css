@@ -41,18 +41,24 @@ h2:not(.home-h2):hover::after {
 main {
   width: 90%;
   margin: auto;
-  margin-bottom: 25px;
+  margin-bottom: 200px;
 }
 
 main h1 {
   text-align: center;
 }
 
-:not(pre) > code {
+:not(pre) > code,
+var {
   background-color: color-mix(in srgb, var(--primary-color) 70%, black);
-  border-radius: 3px;
+  border-radius: 5px;
   font-family: "Source Code Pro", courier, monospace;
-  padding: 1px 5px;
+  padding: 5px 10px;
+}
+
+var {
+  font-style: normal;
+  color: rgb(248, 197, 85);
 }
 
 @property --pos1 {
@@ -87,6 +93,3 @@ main h1 {
   user-select: none;
 }
 
-.text-yellow {
-  color: rgb(248, 197, 85);
-}

@@ -3,7 +3,7 @@ import CodeBlock from "../components/codeblock/CodeBlock";
 import styles from "./fundamentals.module.css";
 
 import runFileImage from "./assets/runfile.png";
-import PageNav from "../components/button/pageNav";
+import PageNav from "../components/button/PageNav";
 
 export default function Fundamentals() {
   return (
@@ -17,7 +17,8 @@ export default function Fundamentals() {
           If you don't have it yet, download it{" "}
           <a
             href="https://www.oracle.com/java/technologies/downloads/"
-            target="_blank">
+            target="_blank"
+          >
             here
           </a>
         </p>
@@ -84,8 +85,8 @@ export default function Fundamentals() {
           <CodeBlock language="java">
             System.out.println(/* what is printed goes here */);
           </CodeBlock>
-          Also, notice the semicolon (";") at the end of the line which is
-          mendatory in java.
+          Also, notice the semicolon (<var>;</var>) at the end of the line which
+          is mendatory in java.
         </p>
         <p>
           Now, we can get into the basics of programming in general. Starting
@@ -110,3 +111,4 @@ function getBoilerplate() {
 function getPythonExample() {
   return `print("Hello World!")`;
 }
+

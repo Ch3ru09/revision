@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 import CodeBlock from "../components/codeblock/CodeBlock";
-import PageNav from "../components/button/pageNav";
+import PageNav from "../components/button/PageNav";
 
 export default function Variables() {
   return (
@@ -27,6 +27,19 @@ export default function Variables() {
           <code>Main.java</code>
           <CodeBlock language={"java"}>{getFlowExamples()}</CodeBlock>
         </p>
+        <p>
+          <h3>Note:</h3>
+          <p>
+            To set a variable, you have to first put the type of the variable (
+            <var>int</var>), then the name of the variable (<var>x</var>), an
+            equal sign (<var>=</var>), and then its value (<var>1</var>).
+          </p>
+          <h3>Note 2:</h3>
+          <p>
+            A variable do not need to have a value on initialization, the value
+            can be set after. e.g. <var>let x;</var>
+          </p>
+        </p>
         <hr />
       </section>
       <section>
@@ -42,9 +55,8 @@ export default function Variables() {
           <CodeBlock language="java">{getDataTypeExamples()}</CodeBlock>
         </p>
         <p>
-          Notice that <code className="text-yellow">String</code> is capitalized
-          while the others aren't. This is because a{" "}
-          <code className="text-yellow">String</code> isn't a{" "}
+          Notice that <var>String</var> is capitalized while the others aren't.
+          This is because a <var>String</var> isn't a{" "}
           <Link to={"data-types#primitives"}>primitive data type</Link>. <br />
           This is because, if compared to the english language, it's not a base
           letter, one of the 26, but a word.
@@ -54,12 +66,21 @@ export default function Variables() {
       <section>
         <h2>Variable Scope</h2>
         <p>
+          A scope, in Java, is a chunk of code enclosed by curly braces{" "}
+          <var>{"{ ... }"}</var>. We can see code as enclosures of scopes.
+        </p>
+        <p>
           Variables in Java are only referenceable within the scope they are
           declared in.
+        </p>
+        <p>
+          <code>Main.java</code>
+          <CodeBlock language="java">{getVariableScopeExample()}</CodeBlock>
         </p>
       </section>
       <nav>
         <PageNav isNext={false}>Fundamentals</PageNav>
+        <PageNav isNext={true}>Functions</PageNav>
       </nav>
     </>
   );
@@ -114,6 +135,23 @@ function getDataTypeExamples() {
 
     String name = "foo";
   }
+}`;
 }
-`;
+
+function getVariableScopeExample() {
+  return `public class BuiltInDataTypes {
+  public static void main(String[] args) {
+    int x = 1;
+
+    if (true) {
+      int y = 2;
+      System.out.println(x); // works, prints 1
+      System.out.println(y); // works, prints 2
+    }
+      
+    System.out.println(x); // works, prints 1
+    System.out.println(y); // error: variable not initialized (variable not in scope)
+  }
+}`;
 }
+
