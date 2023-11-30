@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import CodeBlock from "../components/codeblock/CodeBlock";
 
 export default function Variables() {
@@ -38,7 +39,14 @@ export default function Variables() {
           <code>BuiltInDataTypes.java</code>
           <CodeBlock language="java">{getDataTypeExamples()}</CodeBlock>
         </p>
-        <p>notice that</p>
+        <p>
+          Notice that <code className="text-yellow">String</code> is capitalized
+          while the others aren't. This is because a{" "}
+          <code className="text-yellow">String</code> isn't a{" "}
+          <Link to={"data-types#primitives"}>primitive data type</Link>. <br />
+          This is because, if compared to the english language, it's not a base
+          letter, one of the 26, but a word.
+        </p>
       </section>
     </>
   );
