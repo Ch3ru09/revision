@@ -33,7 +33,7 @@ export default function Variables() {
           In java, as you might have noticed above, when declaring a variable,
           you have to declare it with the Data type that the variable will
           contain. <br />
-          Here's some examples of data types that used.
+          Here's some examples of data types that are often used.
         </p>
         <p>
           <code>BuiltInDataTypes.java</code>
@@ -46,6 +46,14 @@ export default function Variables() {
           <Link to={"data-types#primitives"}>primitive data type</Link>. <br />
           This is because, if compared to the english language, it's not a base
           letter, one of the 26, but a word.
+        </p>
+        <hr />
+      </section>
+      <section>
+        <h2>Variable Scope</h2>
+        <p>
+          Variables in Java are only referenceable within the scope they are
+          declared in.
         </p>
       </section>
     </>
