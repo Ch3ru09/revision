@@ -39,6 +39,11 @@ export default function Variables() {
             A variable do not need to have a value on initialization, the value
             can be set after. e.g. <var>let x;</var>
           </p>
+          <h3>Note 3:</h3>
+          <p>
+            When naming a variable, the only allowed characters are numbers and
+            letters. The first character must be a letter.
+          </p>
         </p>
         <hr />
       </section>
@@ -154,4 +159,3 @@ function getVariableScopeExample() {
   }
 }`;
 }
-
