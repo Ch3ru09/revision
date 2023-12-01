@@ -3,6 +3,7 @@ import CodeBlock from "../components/codeblock/CodeBlock";
 import styles from "./fundamentals.module.css";
 
 import runFileImage from "./assets/runfile.png";
+import compilingImage from "./assets/compiling.png";
 import PageNav from "../components/button/PageNav";
 
 export default function Fundamentals() {
@@ -88,9 +89,27 @@ export default function Fundamentals() {
           Also, notice the semicolon (<var>;</var>) at the end of the line which
           is mendatory in java.
         </p>
+        <hr />
+      </section>
+      <section>
+        <h2>What happens?</h2>
+        <p>Magic. That's all.</p>
+        <p></p>
         <p>
           Now, we can get into the basics of programming in general. Starting
           with variables.
+        </p>
+        <p>In all seriousness, the code is ran as follows:</p>
+        <p>
+          <img
+            src={compilingImage}
+            className={styles["runfile"]}
+            alt="compilingImage"
+          />
+        </p>
+        <p>
+          The source code written in Java first passes through the Java
+          compilier
         </p>
       </section>
       <nav>

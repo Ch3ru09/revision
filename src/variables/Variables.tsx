@@ -15,7 +15,7 @@ export default function Variables() {
           There are many ways to use them, here's some of them:
         </p>
         <p>
-          <code>Main.java</code>
+          <code>Variables.java</code>
           <CodeBlock language={"java"}>{getVariablesUses()}</CodeBlock>
         </p>
         <p>
@@ -24,7 +24,7 @@ export default function Variables() {
           won't be able to be used below.
         </p>
         <p>
-          <code>Main.java</code>
+          <code>ControlFlow.java</code>
           <CodeBlock language={"java"}>{getFlowExamples()}</CodeBlock>
         </p>
         <p>
@@ -74,7 +74,7 @@ export default function Variables() {
           declared in.
         </p>
         <p>
-          <code>Main.java</code>
+          <code>Scopes.java</code>
           <CodeBlock language="java">{getVariableScopeExample()}</CodeBlock>
         </p>
       </section>
@@ -89,7 +89,7 @@ export default function Variables() {
 function getVariablesUses() {
   return `import java.util.Scanner;
 
-public class Main {
+public class Variables {
   public static void main(String[] args) {
 
     // as a counter
@@ -114,7 +114,7 @@ public class Main {
 }
 
 function getFlowExamples() {
-  return `public class Main {
+  return `public class ControlFlow {
   public static void main(String[] args) {
     System.out.println(x); // will error: variable not initialized
     
@@ -139,7 +139,7 @@ function getDataTypeExamples() {
 }
 
 function getVariableScopeExample() {
-  return `public class BuiltInDataTypes {
+  return `public class Scopes {
   public static void main(String[] args) { // outer scope
     int x = 1;
 
