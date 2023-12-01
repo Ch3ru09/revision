@@ -18,8 +18,7 @@ export default function Fundamentals() {
           If you don't have it yet, download it{" "}
           <a
             href="https://www.oracle.com/java/technologies/downloads/"
-            target="_blank"
-          >
+            target="_blank">
             here
           </a>
         </p>
@@ -100,16 +99,24 @@ export default function Fundamentals() {
           with variables.
         </p>
         <p>In all seriousness, the code is ran as follows:</p>
-        <p>
+        <p style={{ display: "flex", flexDirection: "column" }}>
           <img
             src={compilingImage}
             className={styles["runfile"]}
             alt="compilingImage"
           />
+          <small className={styles["runfile"]}>Source: Fireship.io</small>
         </p>
         <p>
           The source code written in Java first passes through the Java
-          compilier
+          compilier and get converted into into a byte code, a format that is
+          readable by the JVM. The JVM is basically a reader tailored to the
+          system it's downloaded on. So instead of having to compile for every
+          operating system, you can just compile once and use the JVM to read on
+          other systems, that's the beauty of Java.
+        </p>
+        <p>
+          Now that this is said, actually time to get started with variables.
         </p>
       </section>
       <nav>
@@ -130,4 +137,3 @@ function getBoilerplate() {
 function getPythonExample() {
   return `print("Hello World!")`;
 }
-
