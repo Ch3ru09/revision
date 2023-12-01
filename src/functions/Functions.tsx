@@ -22,6 +22,41 @@ export default function Functions() {
         <hr />
       </section>
       <section>
+        <h2>Syntax</h2>
+        <p>
+          To declare a method, you first have to declare it in the scope of the
+          class and not in the main method.
+        </p>
+        <p>
+          <code>Where.java</code>
+          <CodeBlock language="java">{getWherePutFunction()}</CodeBlock>
+        </p>
+        <p>
+          The declation goes as follows: <var>accessors</var>{" "}
+          <var>return type</var> <var>name(arguments)</var>{" "}
+          <var> {"{ ... }"}</var>
+        </p>
+        <p>
+          <ul>
+            <li>
+              <var>accessors</var> : explained in details in the{" "}
+              <Link to="/classes#accessors">accessors</Link> section.
+            </li>
+            <li>
+              <var>return type</var> : the type of the data returned (
+              <var>void</var> if nothing is retured).
+            </li>
+            <li>
+              <var>name</var> : same way of naming as variables.
+            </li>
+            <li>
+              <var>arguments</var> :
+            </li>
+          </ul>
+        </p>
+        <hr />
+      </section>
+      <section>
         <h2>Arguments</h2>
         <p>
           Functions (in all languages) can take in arguments. "What is an
@@ -38,7 +73,9 @@ export default function Functions() {
           <var>b</var>, both of type <var>int</var>. It's important to declare
           the type of the arguments for the compiler to check.
         </p>
+        <hr />
       </section>
+
       <nav>
         <PageNav isNext={false}>Variables</PageNav>
         <PageNav isNext={true}>Classes</PageNav>
@@ -65,6 +102,16 @@ function getMethodsExamples() {
 }`;
 }
 
+function getWherePutFunction() {
+  return `public class Where {
+  public static void main(String[] args) {
+    // not here
+  }
+
+  // here
+}`;
+}
+
 function getArgumentsExamples() {
   return `public class Arguments {
   public static void main(String[] args) {
@@ -78,4 +125,3 @@ function getArgumentsExamples() {
   }
 }`;
 }
-
