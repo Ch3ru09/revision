@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import styles from "./pageNav.module.css";
+import styles from "./pagenav.module.css";
 
 export default function PageNav({ isNext, children }: PageNavProps) {
   return (
