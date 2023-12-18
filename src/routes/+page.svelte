@@ -13,9 +13,24 @@
 </script>
 
 <header>
-  <h1>
+  <h1 class="title not-selectable">
     What don't you <br /> understand?
   </h1>
+
+  {#each [LanguageSpecificPages, AllLanguagePages] as e, i}
+    <section class="pages-container">
+      <h2 class="home-h2">{sections[i]}</h2>
+      <div class={"grid"}>
+        {#each e as page}
+          <div onclick={() => navigate(page.toLowerCase())} class={"grid-item hover-effect"}>
+            <img src={icons[page.toLowerCase()]} />
+
+            <h3 class="page-title">{page}</h3>
+          </div>
+        {/each}
+      </div>
+    </section>
+  {/each}
 </header>
 
 <style>
