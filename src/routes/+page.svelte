@@ -1,4 +1,6 @@
 <script>
+  import { icons } from "$lib/assets/icons";
+
   const LanguageSpecificPages = [
     "Fundamentals",
     "Variables",
@@ -22,8 +24,8 @@
       <h2 class="home-h2">{sections[i]}</h2>
       <div class={"grid"}>
         {#each e as page}
-          <div onclick={() => navigate(page.toLowerCase())} class={"grid-item hover-effect"}>
-            <img src={icons[page.toLowerCase()]} />
+          <div class={"grid-item hover-effect"}>
+            <img src={icons[page.toLowerCase()]} alt={page.toLowerCase()} />
 
             <h3 class="page-title">{page}</h3>
           </div>
