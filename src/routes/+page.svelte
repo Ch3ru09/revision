@@ -24,11 +24,11 @@
       <h2 class="home-h2">{sections[i]}</h2>
       <div class={"grid"}>
         {#each e as page}
-          <div class={"grid-item hover-effect"}>
+          <a href={`/${page.toLowerCase()}`} class="grid-item hover-effect">
             <img src={icons[page.toLowerCase()]} alt={page.toLowerCase()} />
 
             <h3 class="page-title">{page}</h3>
-          </div>
+          </a>
         {/each}
       </div>
     </section>
@@ -101,6 +101,7 @@
     border-radius: 40px;
     display: grid;
     place-items: center;
+    text-decoration: none;
 
     --c1: #15ffaa;
     --c2: #e8e8e888;
@@ -110,7 +111,11 @@
     width: 50%;
   }
 
-  .grid-item:hover > h2 {
+  .grid-item > h3 {
+    color: black;
+  }
+
+  .grid-item:hover > h3 {
     filter: invert(100%);
   }
 
