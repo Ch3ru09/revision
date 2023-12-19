@@ -1,5 +1,5 @@
 <script>
-  import { icons } from "$lib/assets/icons";
+  import { icons } from "$lib/assets/pagesIcons/icons";
 
   const LanguageSpecificPages = [
     "Fundamentals",
