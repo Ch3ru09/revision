@@ -12,28 +12,40 @@
   const AllLanguagePages = ["Terminal"];
 
   const sections = ["Language Specific", "All Languages"];
+
+  let position = 0;
 </script>
 
-<header>
+<svelte:head>
+  <title>Revision - Home</title>
+</svelte:head>
+
+<header
+  class="title-container"
+  style={`translate: 0 ${position * 0.5}px;
+          opacity: ${1 - position * 0.5 * 0.004};`}
+>
   <h1 class="title not-selectable">
     What don't you <br /> understand?
   </h1>
-
-  {#each [LanguageSpecificPages, AllLanguagePages] as e, i}
-    <section class="pages-container">
-      <h2 class="home-h2">{sections[i]}</h2>
-      <div class={"grid"}>
-        {#each e as page}
-          <a href={`/${page.toLowerCase()}`} class="grid-item hover-effect">
-            <img src={icons[page.toLowerCase()]} alt={page.toLowerCase()} />
-
-            <h3 class="page-title">{page}</h3>
-          </a>
-        {/each}
-      </div>
-    </section>
-  {/each}
 </header>
+
+{#each [LanguageSpecificPages, AllLanguagePages] as e, i}
+  <section class="pages-container">
+    <h2 class="home-h2">{sections[i]}</h2>
+    <div class={"grid"}>
+      {#each e as page}
+        <a href={`/${page.toLowerCase()}`} class="grid-item hover-effect">
+          <img src={icons[page.toLowerCase()]} alt={page.toLowerCase()} />
+
+          <h3 class="page-title">{page}</h3>
+        </a>
+      {/each}
+    </div>
+  </section>
+{/each}
+
+<svelte:window bind:scrollY={position} />
 
 <style>
   .title {

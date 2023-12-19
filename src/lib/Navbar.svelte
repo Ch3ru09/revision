@@ -1,7 +1,16 @@
 <script>
+  import { onMount } from "svelte";
+  import { goto } from "$app/navigation";
+  import { page } from "$app/stores";
   import { icons } from "$lib/assets/languagesIcons/icons";
+
   let currentLanguage = "java";
   const languages = ["Java", "Javascript", "Typescript", "Python", "Rust"];
+
+  onMount(() => {
+    $page.url.searchParams.set("lang", currentLanguage);
+    goto(`?${$page.url.searchParams.toString()}`);
+  });
 </script>
 
 <nav class="navbar">
@@ -18,7 +27,12 @@
       <ul class="no-dot-ul">
         {#each languages as language}
           <li>
-            <button on:click={() => (currentLanguage = language)}
+            <button
+              on:click={() => {
+                currentLanguage = language;
+                $page.url.searchParams.set("lang", language.toLowerCase());
+                goto(`?${$page.url.searchParams.toString()}`);
+              }}
               ><img
                 class="icon"
                 src={icons[language.toLowerCase()]}
