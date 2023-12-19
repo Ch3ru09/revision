@@ -1,5 +1,6 @@
 <script>
   import CodeBlock from "$lib/CodeBlock.svelte";
+  import PageNav from "$lib/PageNav.svelte";
 
   function getBoilerplate() {
     return `public class HelloWorld {
@@ -97,5 +98,5 @@
   <p>Now that this is said, actually time to get started with variables.</p>
 </section>
 <nav>
-  <PageNav isNext={true}>Variables</PageNav>
+  <PageNav isNext={true} location={"variables"}>Variables</PageNav>
 </nav>
