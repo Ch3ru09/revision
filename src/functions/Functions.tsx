@@ -50,7 +50,7 @@ export default function Functions() {
               <var>name</var> : same way of naming as variables.
             </li>
             <li>
-              <var>arguments</var> :
+              <var>arguments</var> : look below .
             </li>
           </ul>
         </p>
@@ -74,6 +74,12 @@ export default function Functions() {
           the type of the arguments for the compiler to check.
         </p>
         <hr />
+      </section>
+      <section>
+        <h2>Summary</h2>
+        <p>
+          Functions are chunk of code that can be reused as many times as needed
+        </p>
       </section>
 
       <nav>
@@ -125,3 +131,4 @@ function getArgumentsExamples() {
   }
 }`;
 }
+
