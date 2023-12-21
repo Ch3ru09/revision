@@ -1,18 +1,26 @@
 <script>
   import CodeBlock from "$lib/CodeBlock.svelte";
+  import Prism from "prismjs";
+  Prism.highlightElement;
+
   import PageNav from "$lib/PageNav.svelte";
 
-  function getBoilerplate() {
-    return `public class HelloWorld {
-  public static void main(String[] args) {
-    System.out.println("Hello, World!");
-  }
-}`;
-  }
+  import compilingImage from "./assets/compiling.png";
+  import runFileImage from "./assets/runfile.png";
 
-  function getPythonExample() {
+  const getBoilerplate = () => {
+    return (
+      "public class HelloWorld {\n" +
+      "  public static void main(String[] args) {\n" +
+      '    System.out.println("Hello, World!");\n' +
+      "  }\n" +
+      "}"
+    );
+  };
+
+  const getPythonExample = () => {
     return `print("Hello World!")`;
-  }
+  };
 </script>
 
 <h1>Java Fundamentals</h1>
@@ -40,8 +48,13 @@
 
   <p>
     <code>HelloWorld.java</code>
-    <CodeBlock language="java">{getBoilerplate()}</CodeBlock>
   </p>
+  <CodeBlock language="java" source={getBoilerplate()} />
+  <pre class={`language-java`}>
+    <code class={`language-java`}>
+    {getBoilerplate()}
+    </code>
+  </pre>
   <p>
     In this case, we see the basic chunk of code needed for a java program to run. Note that the
     file name corresponds to the name of the class. Otherwise, the code will not run. <br />
@@ -49,7 +62,7 @@
   </p>
   <p>
     <code>HelloWorld.py</code>
-    <CodeBlock language="python">{getPythonExample()}</CodeBlock>
+    {@html Prism.highlight(getPythonExample(), Prism.languages["python"], "python")}
   </p>
   <p>However, it has to be written so the code runs.</p>
   <hr />
@@ -70,11 +83,16 @@
   </p>
   <p>
     When this code is ran, the output in the console should be{" "}
-    <CodeBlock language="txt">Hello, World!</CodeBlock>
+    {@html Prism.highlight("Hello, World!", Prism.languages["plain"], "plain")}
     "Hello World" is the hello that programming students give as they print their first line in the console
-    since they are entering for the first time into the new world that is programming. <br />
+    since they are entering for the first time into the new world that is programming.
+    <br />
     In java, the simplest way to print something to the console is to use the method.
-    <CodeBlock language="java">System.out.println(/* what is printed goes here */);</CodeBlock>
+    {@html Prism.highlight(
+      "System.out.println(/* what is printed goes here */);",
+      Prism.languages["java"],
+      "java"
+    )}
     Also, notice the semicolon (<var>;</var>) at the end of the line which is mendatory in java.
   </p>
   <hr />
@@ -100,3 +118,10 @@
 <nav>
   <PageNav isNext={true} location={"variables"}>Variables</PageNav>
 </nav>
+
+<style>
+  .runfile {
+    width: 50%;
+    margin-left: 5%;
+  }
+</style>
