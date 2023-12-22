@@ -31,6 +31,6 @@
   }
 
   :global(.container > code > span:first-child) {
-    margin-left: -40px;
+    margin-left: -4ch;
   }
 </style>

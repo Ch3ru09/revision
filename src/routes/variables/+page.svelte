@@ -92,4 +92,5 @@
   <PageNav isNext={true} location="functions">Functions</PageNav>
 </nav>
 
-<style></style>
+<style>
+</style>
