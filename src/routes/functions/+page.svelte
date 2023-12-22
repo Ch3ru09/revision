@@ -73,6 +73,10 @@
   <h2>Summary</h2>
   <p>Functions are chunk of code that can be reused as many times as needed</p>
 </section>
+<section>
+  <!-- make new section: Function overloading -->
+  <h2>Function overloading</h2>
+</section>
 
 <nav>
   <PageNav isNext={false} location="variables">Variables</PageNav>
