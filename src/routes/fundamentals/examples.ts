@@ -1,9 +1,9 @@
 const getBoilerplate = () => {
   return (
     "public class HelloWorld {\n" +
-    "  public static void main(String[] args) {\n" +
-    '    System.out.println("Hello World!");\n' +
-    "  }\n" +
+    "\tpublic static void main(String[] args) {\n" +
+    '\t\tSystem.out.println("Hello World!");\n' +
+    "\t}\n" +
     "}"
   );
 };
