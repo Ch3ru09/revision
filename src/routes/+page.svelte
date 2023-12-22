@@ -4,9 +4,9 @@
   const LanguageSpecificPages = [
     "Fundamentals",
     "Variables",
+    "Control-flow",
     "Functions",
-    "Classes",
-    "Control-flow"
+    "Classes"
   ];
 
   const AllLanguagePages = ["Terminal"];
