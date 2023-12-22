@@ -10,7 +10,7 @@
   <p>
     A function is a reusable chunk of code. In Java, the functions are called methods, since Java is
     a language of the Object Oriented Programming (OOP) paradigm and every function in Java is a
-    method of the <a href="/data-types#objects">object</a>.
+    method of the <a class="standalone" href="/data-types#objects">object</a>.
   </p>
   <p>
     <code>Methods.java</code>
@@ -37,7 +37,7 @@
   <ul>
     <li>
       <var>accessors</var> : explained in details in the{" "}
-      <a href="/classes#accessors">accessors</a> section.
+      <a class="standalone" href="/classes#accessors">accessors</a> section.
     </li>
     <li>
       <var>return type</var> : the type of the data returned (

@@ -19,7 +19,13 @@
   <p>
     First, make sure that you have downloaded the Java Development Kit (JDK). <br />
     If you don't have it yet, download it{" "}
-    <a href="https://www.oracle.com/java/technologies/downloads/" target="_blank"> here </a>
+    <a
+      class="standalone"
+      href="https://www.oracle.com/java/technologies/downloads/"
+      target="_blank"
+    >
+      here
+    </a>
   </p>
   <p>
     After it's downloaded, you can open your code editor or your IDE of choice and create a file.
@@ -60,7 +66,7 @@
   </p>
   <p>
     My prefered way of running code is to use the termial (see{" "}
-    <a href="/terminal">course</a> on terminal commands).
+    <a class="standalone" href="/terminal">course</a> on terminal commands).
   </p>
   <p>However, you can just use the IDE's built-in run button like for Intellij in this case.</p>
   <p>

@@ -66,14 +66,24 @@
 
   .pages-container {
     position: relative;
-
     width: 80%;
     margin: auto;
     padding: 50px;
-
     border-radius: 40px;
     background-color: color-mix(in srgb, var(--primary-color) 80%, transparent);
-    box-shadow: 0px 0px 20px 50px color-mix(in srgb, var(--primary-color) 80%, transparent);
+  }
+
+  .pages-container:first-of-type:before {
+    position: absolute;
+    height: 100px;
+    width: 100%;
+    top: 0;
+    translate: 0 -100%;
+    background-image: linear-gradient(
+      0deg,
+      color-mix(in srgb, var(--primary-color) 80%, transparent),
+      transparent
+    );
   }
 
   .grid {

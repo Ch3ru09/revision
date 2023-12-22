@@ -69,7 +69,7 @@
     Notice that <var>String</var> is capitalized while the others aren't. This is because a
     <var>String</var>
     isn't a{" "}
-    <a href="data-types#primitives">primitive data type</a>. <br />
+    <a class="standalone" href="data-types#primitives">primitive data type</a>. <br />
     This is because, if compared to the english language, it's not a base letter, one of the 26, but
     a word.
   </p>
