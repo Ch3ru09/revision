@@ -31,7 +31,7 @@ h2:not(.home-h2) {
 
 h2:not(.home-h2):hover::after {
   content: "";
-  background-image: url("/link.png");
+  background-image: url("./link.png");
   height: 100%;
   width: auto;
   aspect-ratio: 1;
@@ -39,6 +39,7 @@ h2:not(.home-h2):hover::after {
   position: absolute;
   margin-left: 10px;
   filter: invert(60%);
+  rotate: 45deg;
 }
 
 main {
@@ -95,4 +96,3 @@ var {
 .not-selectable {
   user-select: none;
 }
-

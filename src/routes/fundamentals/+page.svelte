@@ -1,27 +1,17 @@
 <script>
-  import CodeBlock from "$lib/CodeBlock.svelte";
   import Prism from "prismjs";
-  Prism.highlightElement;
 
+  import CodeBlock from "$lib/CodeBlock.svelte";
   import PageNav from "$lib/PageNav.svelte";
 
   import compilingImage from "./assets/compiling.png";
   import runFileImage from "./assets/runfile.png";
-
-  const getBoilerplate = () => {
-    return (
-      "public class HelloWorld {\n" +
-      "  public static void main(String[] args) {\n" +
-      '    System.out.println("Hello, World!");\n' +
-      "  }\n" +
-      "}"
-    );
-  };
-
-  const getPythonExample = () => {
-    return `print("Hello World!")`;
-  };
+  import { getBoilerplate, getPythonExample } from "./examples";
 </script>
+
+<svelte:head>
+  <title>Revision - Fundamentals</title>
+</svelte:head>
 
 <h1>Java Fundamentals</h1>
 <section>
@@ -48,13 +38,8 @@
 
   <p>
     <code>HelloWorld.java</code>
+    <CodeBlock language="java" source={getBoilerplate()} />
   </p>
-  <CodeBlock language="java" source={getBoilerplate()} />
-  <pre class={`language-java`}>
-    <code class={`language-java`}>
-    {getBoilerplate()}
-    </code>
-  </pre>
   <p>
     In this case, we see the basic chunk of code needed for a java program to run. Note that the
     file name corresponds to the name of the class. Otherwise, the code will not run. <br />
@@ -62,7 +47,7 @@
   </p>
   <p>
     <code>HelloWorld.py</code>
-    {@html Prism.highlight(getPythonExample(), Prism.languages["python"], "python")}
+    <CodeBlock language="python" source={getPythonExample()} />
   </p>
   <p>However, it has to be written so the code runs.</p>
   <hr />
@@ -88,11 +73,10 @@
     since they are entering for the first time into the new world that is programming.
     <br />
     In java, the simplest way to print something to the console is to use the method.
-    {@html Prism.highlight(
-      "System.out.println(/* what is printed goes here */);",
-      Prism.languages["java"],
-      "java"
-    )}
+    <CodeBlock
+      language="java"
+      source="System.out.println(/* what need to be printed goes here */);"
+    />
     Also, notice the semicolon (<var>;</var>) at the end of the line which is mendatory in java.
   </p>
   <hr />
@@ -103,7 +87,7 @@
   <p></p>
   <p>Now, we can get into the basics of programming in general. Starting with variables.</p>
   <p>In all seriousness, the code is ran as follows:</p>
-  <p style="{'display: flex; flexDirection: column;'}}">
+  <p style="display: flex; flex-direction: column;">
     <img src={compilingImage} class="runfile" alt="compilingImage" />
     <small class="runfile">Source: Fireship.io</small>
   </p>
