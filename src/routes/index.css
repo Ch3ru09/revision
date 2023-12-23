@@ -44,7 +44,7 @@ h2:not(.home-h2):hover::after {
 }
 
 main {
-  width: 80%;
+  width: 90%;
   margin: auto;
   margin-bottom: 200px;
 }
@@ -108,3 +108,4 @@ a.standalone:hover {
 .not-selectable {
   user-select: none;
 }
+
