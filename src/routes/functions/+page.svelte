@@ -1,8 +1,19 @@
 <script>
   import CodeBlock from "$lib/CodeBlock.svelte";
   import PageNav from "$lib/PageNav.svelte";
-  import { getArgumentsExamples, getMethodsExamples, getWherePutFunction } from "./examples";
+  import {
+    getArgumentsExamples,
+    getJavaFunctionOverloadingExample,
+    getMethodsExamples,
+    getModifiedRustFunctionOverloadingExample,
+    getRustFunctionOverloadingExample,
+    getWherePutFunction
+  } from "./examples";
 </script>
+
+<svelte:head>
+  <title>Revision - Functions</title>
+</svelte:head>
 
 <h1>Functions (or methods)</h1>
 <section>
@@ -71,7 +82,7 @@
 </section>
 <section>
   <!-- make new section: Function overloading -->
-  <h2>Function overloading</h2>
+  <h2>Method overloading</h2>
   <p>
     Only 2 things are hard in programming: making things work in <a
       class="standalone"
@@ -79,13 +90,42 @@
       target="_blank">Assembly...</a
     > and Naming Things.
   </p>
+  <p>And, thankfully, Java has method overloading to make naming methods way easier.</p>
+  <p>
+    <code>overloading.rs</code>
+    <CodeBlock language="rust" source={getRustFunctionOverloadingExample()} />
+  </p>
+  <p>
+    <code>Overloading.java</code>
+    <CodeBlock language="java" source={getJavaFunctionOverloadingExample()} />
+  </p>
+  <p>
+    As you can see from the examples above, method overloading is useful when one method is used
+    with different types and length of arguments. <br />
+    However, even if it's a useful feature, method overloading is not inherently better or an improvement.
+  </p>
+  <p>
+    In fact, rust, one of the most loved programming languages, does not have function overloading,
+    because instead of using a different function, people would generaly generalize the arguments of
+    the function.
+  </p>
+  <p>
+    <code>overloading.rs</code>
+    <CodeBlock language="rust" source={getModifiedRustFunctionOverloadingExample()} />
+  </p>
+  <p>
+    To conclude this section, use the method overloading feature that Java provides to make code
+    that you feel more confortable working with.
+  </p>
+  <hr />
 </section>
 <section>
   <h2>Summary</h2>
   <p>Functions are chunk of code that can be reused as many times as needed.</p>
   <p>
-    If you don't wan't to rename a function, you can use the same name with different parameters to
-    overload the function.
+    If you don't wan't to rename a method, you can use the same name with different parameters to
+    overload the method. <br />
+    Let's see two examples, one in rust and one in Java:
   </p>
 </section>
 

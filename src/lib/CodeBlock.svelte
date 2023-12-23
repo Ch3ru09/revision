@@ -6,6 +6,7 @@
 
   import "prismjs/components/prism-python";
   import "prismjs/components/prism-java";
+  import "prismjs/components/prism-rust";
 
   import "prismjs/plugins/autoloader/prism-autoloader";
   import "prismjs/plugins/line-numbers/prism-line-numbers";
