@@ -130,6 +130,6 @@
 </section>
 
 <nav>
-  <PageNav isNext={false} location="variables">Variables</PageNav>
+  <PageNav isNext={false} location="control-flow">Control Flow and Loops</PageNav>
   <PageNav isNext={true} location="classes">Classes</PageNav>
 </nav>
