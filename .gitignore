@@ -11,3 +11,6 @@ vite.config.ts.timestamp-*
 
 # bun
 bun.lockb
+
+# pnpm
+pnpm-lock.yaml

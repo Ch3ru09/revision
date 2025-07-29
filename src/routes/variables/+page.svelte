@@ -89,5 +89,5 @@
 </section>
 <nav>
   <PageNav isNext={false} location="fundamentals">Fundamentals</PageNav>
-  <PageNav isNext={true} location="control-flow">Control-Flow</PageNav>
+  <PageNav isNext={true} location="control-flow">Control Flow and Loops</PageNav>
 </nav>
